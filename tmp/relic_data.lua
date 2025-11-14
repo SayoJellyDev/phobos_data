@@ -16712,11 +16712,7 @@ RelicData = {
             },
             {
                 Item = "Okina Prime",
-<<<<<<< HEAD
                 Part = "Handle",
-=======
-                Part = "Blueprint",
->>>>>>> 21c02d6a305befb7bf851f0627301410c26b1067
                 Rarity = "Uncommon",
             },
             {

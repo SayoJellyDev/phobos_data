@@ -86,6 +86,14 @@ local MissionData = {
 			InternalName = "MT_CAPTURE",
 			IsEndless = false
 		},
+		Deception = {
+			Name = "Deception",
+			Link = "Deception",
+			Introduced = "Vanilla",
+			Index = 6,
+			InternalName = "MT_COUNTER_INTEL",
+			IsEndless = false
+		},
 		Spy = {
 			Name = "Spy",
 			Link = "Spy",
@@ -115,7 +123,24 @@ local MissionData = {
 			Name = "Conclave",
 			Link = "Conclave",
 			Introduced = "10",
+			Index = 10,
 			InternalName = "MT_PVP",
+			IsEndless = false
+		},
+		["Mastery Test"] = {
+			Name = "Mastery Test",
+			Link = "Mastery Rank",
+			Introduced = "7",
+			Index = 11,
+			InternalName = "MT_MASTERY",
+			IsEndless = false
+		},
+		Recovery = {
+			Name = "Recovery",
+			Link = "Recovery",
+			Introduced = "11.7.3",
+			Index = 12,
+			InternalName = "MT_RECOVERY",
 			IsEndless = false
 		},
 		Interception = {
@@ -140,7 +165,7 @@ local MissionData = {
 			Link = "Sabotage/Hive",
 			Introduced = "13.8",
 			Index = 15,
-			InternalName = "MT_DEFENSE", -- TODO: Double check in EE.log if this is true
+			InternalName = "MT_HIVE",
 			IsEndless = false
 		},
 		["Solar Rail Conflict"] = {
@@ -148,7 +173,7 @@ local MissionData = {
 			Link = "Solar Rail Conflict",
 			Introduced = "14",
 			Index = 16,
-			InternalName = "MT_SECTOR",
+			InternalName = "MT_SALVAGE",
 			IsEndless = false
 		},
 		Excavation = {
@@ -171,7 +196,8 @@ local MissionData = {
 			Name = "Trial",
 			Link = "Trial",
 			Introduced = "16",
-			InternalName = "",
+			Index = 18,
+			InternalName = "MT_RAID",
 			IsEndless = false
 		},
 		["Annihilation"] = {
@@ -195,6 +221,20 @@ local MissionData = {
 			InternalName = "",
 			IsEndless = false
 		},
+		["MT_PURGE"] = {
+			Name = "MT_PURGE",
+			Link = "MT_PURGE",
+			Introduced = "999",
+			Index = 19,
+			InternalName = "MT_PURGE"
+		},
+		["MT_GENERIC"] = {
+			Name = "MT_GENERIC",
+			Link = "MT_GENERIC",
+			Introduced = "999",
+			Index = 20,
+			InternalName = "MT_GENERIC"
+		},
 		["Infested Salvage"] = {
 			Name = "Infested Salvage",
 			Link = "Infested Salvage",
@@ -216,13 +256,16 @@ local MissionData = {
 			Name = "Lunaro",
 			Link = "Lunaro",
 			Introduced = "Lunaro",
-			InternalName = "",
+			Index = 10,
+			InternalName = "MT_PVP",
 			IsEndless = false
 		},
 		["Solar Rail Junction"] = {
 			Name = "Solar Rail Junction",
 			Link = "Junction",
 			Introduced = "Specters of the Rail",
+			Index = 23,
+			InternalName = "MT_JUNCTION",
 			IsEndless = false
 		},
 		Pursuit = {
@@ -230,7 +273,7 @@ local MissionData = {
 			Link = "Pursuit",
 			Introduced = "Specters of the Rail",
 			Index = 24,
-			InternalName = "",
+			InternalName = "MT_PURSUIT",
 			IsEndless = false
 		},
 		Rush = {
@@ -277,7 +320,17 @@ local MissionData = {
 			Name = "Sanctuary Onslaught",
 			Link = "Sanctuary Onslaught",
 			Introduced = "22.18",
+			Index = 30,
 			InternalName = "MT_ENDLESS_EXTERMINATION",
+			IsEndless = true,
+			RewardRotation = "AABC"
+		},
+		["The Circuit"] = {
+			Name = "The Circuit",
+			Link = "The Circuit",
+			Introduced = "33",
+			Index = 31,
+			InternalName = "MT_ENDLESS_DUVIRI",
 			IsEndless = true,
 			RewardRotation = "AABC"
 		},
@@ -285,7 +338,7 @@ local MissionData = {
 			Name = "Disruption",
 			Link = "Disruption",
 			Introduced = "25",
-			Index = 32,
+			Index = 33,
 			InternalName = "MT_ARTIFACT",
 			IsEndless = true,
 			RewardRotation = "Unique, see [[Disruption#Rewards]]"
@@ -294,12 +347,15 @@ local MissionData = {
 			Name = "Free Flight",
 			Link = "Free Flight",
 			Introduced = "27",
+			Index = 32,
+			InternalName = "MT_RAILJACK",
 			IsEndless = false
 		},
 		Skirmish = {
 			Name = "Skirmish",
 			Link = "Skirmish",
 			Introduced = "27",
+			Index = 32,
 			InternalName = "MT_RAILJACK",
 			IsEndless = false
 		},
@@ -307,7 +363,8 @@ local MissionData = {
 			Name = "Orphix",
 			Link = "Orphix (Mission)",
 			Introduced = "29.6",
-			InternalName = "",
+			Index = 32,
+			InternalName = "MT_RAILJACK",
 			IsEndless = true,
 			RewardRotation = "AABC"
 		},
@@ -315,14 +372,15 @@ local MissionData = {
 			Name = "Volatile",
 			Link = "Volatile",
 			Introduced = "29.10",
-			InternalName = "",
+			Index = 32,
+			InternalName = "MT_RAILJACK",
 			IsEndless = false
 		},
 		["Void Flood"] = {
 			Name = "Void Flood",
 			Link = "Void Flood",
 			Introduced = "31.5",
-			Index = 33,
+			Index = 34,
 			InternalName = "MT_CORRUPTION",
 			IsEndless = true,
 			RewardRotation = "AABC"
@@ -331,7 +389,7 @@ local MissionData = {
 			Name = "Void Cascade",
 			Link = "Void Cascade",
 			Introduced = "31.5",
-			Index = 34,
+			Index = 35,
 			InternalName = "MT_VOID_CASCADE",
 			IsEndless = true,
 			RewardRotation = "AABC"
@@ -340,7 +398,7 @@ local MissionData = {
 			Name = "Void Armageddon",
 			Link = "Void Armageddon",
 			Introduced = "31.5",
-			Index = 35,
+			Index = 36,
 			InternalName = "MT_ARMAGEDDON",
 			IsEndless = true,
 			RewardRotation = "AABC"
@@ -349,16 +407,8 @@ local MissionData = {
 			Name = "Mirror Defense",
 			Link = "Mirror Defense",
 			Introduced = "32.3",
-			Index = 36,
+			Index = 8,
 			InternalName = "MT_DEFENSE",
-			IsEndless = true,
-			RewardRotation = "AABC"
-		},
-		Alchemy = {
-			Name = "Alchemy",
-			Link = "Alchemy",
-			Introduced = "35",
-			InternalName = "MT_ALCHEMY",
 			IsEndless = true,
 			RewardRotation = "AABC"
 		},
@@ -366,13 +416,24 @@ local MissionData = {
 			Name = "Netracells",
 			Link = "Netracells",
 			Introduced = "35",
+			Index = 37,
 			InternalName = "MT_VAULTS",
 			IsEndless = false
+		},
+		Alchemy = {
+			Name = "Alchemy",
+			Link = "Alchemy",
+			Introduced = "35",
+			Index = 38,
+			InternalName = "MT_ALCHEMY",
+			IsEndless = true,
+			RewardRotation = "AABC"
 		},
 		Ascension = {
 			Name = "Ascension",
 			Link = "Ascension",
 			Introduced = "36",
+			Index = 39,
 			InternalName = "MT_ASCENSION",
 			IsEndless = false
 		},
@@ -470,6 +531,11 @@ local MissionData = {
 			Name = "Dark Sectors",
 			Link = "Dark Sectors",
 			LocationNote = "See [[Dark Sectors#Locations]] for specific locations"
+		},
+		["Deepmines Bounty"] = {
+			Name = "Deepmines Bounty",
+			Link = "Deepmines#Bounties",
+			LocationNote = "*[[Fortuna]], [[Venus]]; talk to [[Nightcap]]; Must complete [[The New War]] quest"
 		},
 		["Deep Archimedea"] ={
 			Name = "Deep Archimedea",
